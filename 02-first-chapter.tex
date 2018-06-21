@@ -115,7 +115,7 @@ PPIL permet d'assurer le suivi des projets de la CNAM.
 Celui-ci répond à plusieurs besoins :
 \begin{itemize}
     \item Centralisation : au sein d’un même espace des données de planification et de pilotage venant de Microsoft Project
-    \item Suivi & Contrôle : vues consolidées facilitant le suivi et la vérification des données de pilotage (actualisation des données, cohérence, …)
+    \item Suivi et Contrôle : vues consolidées facilitant le suivi et la vérification des données de pilotage (actualisation des données, cohérence, …)
     \item Évolutivité & Maintenance : socle permettant de mettre en place de nouvelles fonctionnalités et de les déployer pour tous les utilisateurs
     \item Communication : faciliter la diffusion de l’information
 \end{itemize}
@@ -142,18 +142,20 @@ Les droits en lecture et/ou écriture selon le profil de l’utilisateur sont vi
 Les utilisateurs accèdent à « Mon espace » et selon leurs profils, les informations restituées à l’écran varient. Les sous-espaces définis pour chaque profil suivent la description ci-après, dans l’ordre défini 
 
 \subsubsection{Utilisateurs de PPIL :}
-Opérationnel, comprenant les : 
+PPIL comprend plusieurs types de profils, on peut citer tout d'abord les profils de type opérationnel, comprenant les : 
 \begin{itemize}
     \item Responsable DSI
     \item MOA
     \item Managers (Responsable de Direction ou Responsable de Département) 
     \item Chef de Projet
 \end{itemize}
-Stratégiques, comprenant les :
+Et on peut citer les profils de type stratégiques, comprenant les :
 \begin{itemize}
     \item PMO
     \item Responsable de domaines
 \end{itemize}
+
+Il ne faut pas oublier de citer les Visiteurs et Administrateurs.
 
 \subsubsection{Les acteurs et leurs niveaux d'autorisation}
 \begin{figure}[!h]
@@ -168,29 +170,36 @@ Stratégiques, comprenant les :
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=1\textwidth]{images/ppil lien lot projet prtpalier.png}
+\includegraphics[width=0.9\textwidth]{images/ppil lien lot projet prtpalier.png}
 \caption{PPIL lien lot projet PrtPalier}
 \end{figure}
 
 \subsubsection{Principe du Reporting - Suivi de projet}
 
-AU sein de la CNAM, tous les acteurs d’un lot renseignent et mettent à jour le planning MSP de leur projet, en renseignant des données de type :
+Au sein de la CNAM, tous les acteurs d’un lot renseignent et mettent à jour le planning MSP de leur projet, en renseignant des données du type :
+
+\vspace{1\baselineskip}
+
 \begin{itemize}
     \item Avancement charges, 
     \item Dates des jalons, 
     \item consommé des ressources.
 \end{itemize}
 
+\vspace{1\baselineskip}
+
 Les informations MSP sont remontées dans PPIL de plusieurs manières :
 \begin{itemize}
-    \item Batch 2 fois par jour
-    \item Données prévisionnelles
-    \item Actualiser les données MSP (CP) 
+    \item Un batch automatique lancé 2 fois par jour
+    \item Dans PPIL > Données prévisionnelles
+    \item Dans PPIL > Actualiser les données MSP (CP)
 \end{itemize}
+
+\vspace{1\baselineskip}
 
 Tous les acteurs doivent renseigner les risques et problèmes rencontrés sur leur projet ainsi que l'état de leur projet (facultatif).
 
-\subsubsection{Principe du Reporting - CP}
+\subsubsection{Principe du Reporting - Exemple du CP}
 Le CP du projet référent doit soumettre le reporting du lot toutes les 2 semaines (météo, tendance, situation).
 
 Une fois soumis le reporting du lot est visible par tous les utilisateurs du PPIL.
@@ -199,7 +208,8 @@ Le Manager doit saisir la note de conjoncture du lot tous les 2 mois :
 Cette action permet d'expliquer la situation opérationnelle du lot de manière moins technique, cette note de conjoncture est plus destiné aux supérieurs hiérarchiques ( Resp DSI).
 
 \subsubsection{Chef de Projet}
-Dashboard du CP :
+
+Le Dashboard du CP comprend :
 
 \begin{itemize}
     \item Bulletin de santé
@@ -211,56 +221,23 @@ Dashboard du CP :
     \item Rapports
 \end{itemize}
 
-Accès au portail PPIL via une délégation
-Un délégant, a la possibilité de donner l’accès à ses espaces à un autre utilisateur délégataire.
-Le délégataire choisit dans la liste des personnes dans le bandeau, sous le profil, le profil du délégant. Le délégataire possède tous les droits sur l’espace de son délégant.
+Ci-dessous l'accueil du CP :
 
-\subsubsection{Visualiser des indicateurs}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{images/ppil-CP.PNG}
+\caption{PPIL : Accueil CP}
+\end{figure}
 
-PPIL permet aux différents profils d'utilisateurs de visualiser les indicateurs opérationnels sur son périmètre.
+Ci-dessous, un Chef de projet peut effectuer le reporting d'un projet :
 
-Par exemple, pour les profils CP, Manager, Responsable DSI et MOA, on peut visualiser :
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\textwidth]{images/ppil-meteo.PNG}
+\caption{PPIL : Reporting et note de conjoncture}
+\end{figure}
 
-\begin{itemize}
-    \item l’indicateur Bulletin de santé
-Les projets dont la tendance est en dégradation et/ou la météo est orageuse sont mis en évidence par cet indicateur.
-Visualiser l’indicateur Dérive des jalons
-Les projets dont le prochain jalon et/ou la date de mise en production est en dérive sont mis en évidence par cet indicateur.
-    \begin{itemize}
-        \item Un jalon est en dérive lorsqu’il existe une différence de plus de 7 jours entre les dates du dernier reporting et de celui fait il y a un mois.
-    \end{itemize}
-    \item 
-\end{itemize}
-
-Visualiser l’indicateur Avancement par phase : Chef de projet
-    Les jalons de tous les projets aux états « En cours » du périmètre sont représentés dans cet indicateur.
-
-Visualiser l’indicateur Plan de charge équipe : Manager
-En cliquant sur le graphique, on accède au rapport du Capacity Planning
-
-Visualiser l’indicateur Planning des MEP : Responsable DSI et MOA
-Les lots dont la date de mise en production est comprise entre le mois passé et les six prochains mois sont placés sur une échelle de temps.
-
-Accès au reporting
-Dans les indicateurs dans lesquels sont affichés les noms des projets, en cliquant sur le nom d’un projet :
-\begin{itemize}
-    \item En tant que Manager, Responsable DSI et MOA, on accède à la restitution du reporting
-    \item En tant que CP, on accède à la saisie du reporting
-\end{itemize}
-\subsubsection{Exécuter les actions rapides liées à mes projets}
-
-Atteindre reporting et Actualiser les données MSP : Chef de projet
-
-Visualiser le nombre de notes de conjoncture à mettre à jour : Manager
-
-
-\subsubsection{Accéder à mes « informations opérationnelles » : CP, Manager, Responsable DSI et MOA}
-Gérer les actions de mes projets : Chef de projet
-Les actions remontées depuis une semaine ou moins sont taguées comme « Nouveau » et seules les actions dont la date d’échéance est soit dépassée, soit dont l’échéance est à venir sont affichées.
-Consulter mes rapports opérationnels
-En tant que CP, Manager, Responsable DSI et MOA, il est possible d’accéder au bloc « Rapports » dans « Mon espace » au niveau du sous-espace, situé dans la partie gauche de la page en dessous du bloc Alertes.
-Visualiser la liste des projets / lots de mon périmètre
-
+On peut aussi avoir accès au portail PPIL via une délégation.
 
 %%% Local Variables: 
 %%% mode: latex

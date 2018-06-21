@@ -32,7 +32,7 @@ La deuxième solution qui s'offre aux manager de projet est, dans l'intranet du 
 \caption{MATRIX : Template du document Excel qui recense les collaborateurs en fonction de leurs compétences}
 \end{figure}
 
-Il est important d'analyser ce document car c'est celui-ci qui dans la pratique est utilisé par les manager de projet. Pour la conception de notre application, il est important de prendre en compte la façon dont les information sont agencés dans ce fichier Excel.
+Il est important d'analyser ce document car c'est celui-ci qui dans la pratique est utilisé par les manager de projet. Pour la conception de notre application, il est important de prendre en compte la façon dont les informations sont agencées dans ce fichier Excel.
 
 Au vu des outils et processus cité ci-dessus, on voit bien que l'application MATRIX a bien sa place au sein du pôle CNAM métier et qu'elle serait un réel atout pour les manager de projets.
 
@@ -40,19 +40,21 @@ Au vu des outils et processus cité ci-dessus, on voit bien que l'application MA
 
 Lors de la conception de l'application, nous nous sommes retrouvés face à diverses problématiques. 
 
-Par exemple, lorsque nous nous sommes demandés comment seront géré la liste des compétences en BDD : qui et comment seront ajouté les compétences, 
+Par exemple, lorsque nous nous sommes demandés comment sera géré la liste des compétences en base de donnée : qui et comment seront ajouté les compétences.
 
-nous nous sommes retrouvés face à plusieurs questions : est-ce qu'un utilisateur peut ajouter lui même une fonctionnalité ? Ou est-ce qu'elle sont déterminées en base de données ? Si elles sont déterminées en base de données comment en ajouter une nouvelle ? faut il faire des demandes administrateur ? Est-ce que les détails de la compétence (image, version ?) seront transmises avec ?
+Nous nous sommes retrouvés face à plusieurs questions : Est-ce qu'un utilisateur peut ajouter lui même une fonctionnalité ? Ou est-ce qu'elle sont déterminées en base de données ? Si elles sont déterminées en base de données comment en ajouter une nouvelle ? Faut il faire des demandes administrateur ? Est-ce que les détails de la compétence (image, version ?) seront transmises avec ?
 
 Toutes ces questions, nous avons pu y répondre grâce à :
-- l'étude des outils existants (document Excel)
-- différents points avec le client
-- priorité et faisabilité des fonctionnalités en un temps déterminé
+\begin{itemize}
+\item l'étude des outils existants (document Excel)
+\item différents points avec le client
+\item priorité et faisabilité des fonctionnalités en un temps déterminé
+\end{itemize}
 
 Nous avons choisi de :
-ne pas prendre en compte les différentes versions des technologies. (grâce au document excel)
-de ne mas passer par l'admin pour ajouter une technologie. (grâce aux entretiens avec le client)
-qu'il y aura une liste par défaut des technologies en base de données.(grâce au document excel)
+Ne pas prendre en compte les différentes versions des technologies. (grâce au document Excel)
+de ne mas passer par l'administrateur pour ajouter une technologie. (grâce aux entretiens avec le client)
+qu'il y aura une liste par défaut des technologies en base de données.(grâce au document Excel)
 l'ajout d'une base de donnée sera géré dans le lot 2.
 
 \subsubsection{Classer les fonctionnalités par priorité : Lot 1 et Lot 2}
@@ -62,11 +64,13 @@ Concernant les droits d’accès pour chacun des 3 profils (collaborateurs, admi
 \subsection{Choix des technologies}
 
 Nous avons été libre de choisir les technologies : 
-- Java Spring 
-- JHipster 
-- JavaScript
+\begin{itemize}
+\item Java Spring 
+\item JHipster 
+\item JavaScript
+\end{itemize}
 
-Spring est un socle pour le développement d'applications très répandu en entreprises. Il représente un réel avantage en nous fournissant de nombreuses fonctionnalités qui peuvent être utilisés de plusieurs manières : ceci nou laisse le choix au développeur d'utiliser la solution qui correspond le plus à nos besoins.
+Spring est un socle pour le développement d'applications très répandu en entreprises. Il représente un réel avantage en nous fournissant de nombreuses fonctionnalités qui peuvent être utilisées de plusieurs manières : ceci nous laisse le choix au développeur d'utiliser la solution qui correspond le plus à nos besoins.
 Spring est ainsi un des frameworks les plus répandus dans le monde Java et dispose d'une grande popularité.
 
 JHipster fournit des outils pour générer un projet avec côté serveur, une pile Java (à l'aide de Spring Boot) et côté client un frontal Web adaptatif (avec Angular et Bootstrap).
@@ -79,14 +83,17 @@ JavaScript, le grand incontournable des pages web interactives. JHipster étant 
 
 Bilan :
 
-Lecture des SFG existant, nous avons fait le point sur certaines précision de
-- l’objectif premier à savoir la recherche de compétence pour la création d’une équipe
-- les droits d’accès en fonction des types de profils
-- discussion et choix des fonctionnalités à destination du lot 1
-- Qui va faire la liste des compétences en BDD ?
-- récupération des docs existant On a besoin de ce qui à déjà été fait sur excel -> demander l’accès au fichier (filtres, profils etc…)
-- Les CU sont listés avant les maquettes ? Lister les maquettes correspondantes aux CU dans la même partie ?
-- faire des maquettes 
+Lecture des SFG existant, nous avons fait le point sur certaines précisions de
+\begin{itemize}
+\item l’objectif premier à savoir la recherche de compétence pour la création d’une équipe
+\item les droits d’accès en fonction des types de profils
+\item discussion et choix des fonctionnalités à destination du lot 1
+\item Qui va faire la liste des compétences en base de donnée ?
+\item récupération des documents existant On a besoin de ce qui à déjà été fait sur Excel -> demander l’accès au fichier (filtres, profils etc…)
+\item Les cas d'utilisations sont listés avant les maquettes ? Lister les maquettes correspondantes aux cas d'utilisations dans la même partie ?
+\item faire des maquettes 
+\end{itemize}
+
 
 Objectif semaine prochaine :
 
@@ -95,28 +102,28 @@ En règle générale, il faut corriger les scénarios nominaux (syntaxe parfois 
 \subsubsection{Compte rendu 30/05}
 
 Bilan :
-
-- Retour sur les questions du CR1
-- Les maquettes pas prioritaires pour le moment
-- Rédaction des CU
-- proposition d'utiliser Jhipster
-
+\begin{itemize}
+\item Retour sur les questions du CR1
+\item Les maquettes pas prioritaires pour le moment
+\item Rédaction des CU
+\item proposition d'utiliser Jhipster
+\end{itemize}
 Objectif semaine prochaine :
-
-- Terminer les sfd avant la semaine prochaine (retour des SFG pour le 12)
-- Maquettes avant le 24 juin // et commencer les dev en parallèle 
-- faire le planning
-- démo d’installation de JHipster
-- Se renseigner sur les règles de rédaction des SFD
-
+\begin{itemize}
+\item Terminer les sfd avant la semaine prochaine (retour des SFG pour le 12)
+\item Maquettes avant le 24 juin // et commencer les développements en parallèle 
+\item faire le planning
+\item Démo d’installation de JHipster
+\item Se renseigner sur les règles de rédaction des SFD
+\end{itemize}
 \subsubsection{Compte rendu 6/06}
 
 Bilan :
-
-- Installation JHispter
-- Installation IDE
-- Mis en place du git lab. 
-
+\begin{itemize}
+\item Installation JHispter
+\item Installation IDE
+\item Mis en place du git lab. 
+\end{itemize}
 Objectif semaine prochaine :
 
 - Modification des CU
@@ -125,21 +132,25 @@ Objectif semaine prochaine :
 \subsubsection{Compte rendu 13/06 }
 
 Bilan :
-
-- Début de rédaction des STD (Template)
-- Schéma de la base de donnée
-- Maquette pour les SFD
+\begin{itemize}
+\item Début de rédaction des STD (Template)
+\item Schéma de la base de donnée
+\item Maquette pour les SFD
+\end{itemize}
 
 Objectif semaine prochaine :
-
-- Valider la base de donnée auprès d'un expert
-- Finir les SFD
+\begin{itemize}
+\item Valider la base de donnée auprès d'un expert
+\item Finir les SFD
+\end{itemize}
 
 \subsection{Mise en place des SFG **}
 
 spécifications fonctionnelles SFG
-    - pour le projet entier
-    - pour le lot 1
+\begin{itemize}
+\item pour le projet entier
+\item pour le lot 1
+\end{itemize}
 spécifications techniques (STD = spécification techniques détaillées)
 
 \subsection{Mise en place des STD **}
@@ -162,9 +173,10 @@ Nous avons réalisé des maquettes du projet MATRIX en nous basant sur celles d�
 
 \subsection{La BDD **}
 
-\begin{figure}[!h]
+Voici la base de donnée du projet :
+\begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{images/matrix-bdd.png}
+\includegraphics[width=0.8\textwidth]{images/matrix-bdd.png}
 \caption{MATRIX : MCD}
 \end{figure}
 
@@ -176,13 +188,10 @@ Git Intellij Gitlab
 
 Sopra Steria a proposé à tous les stagiaires de l'agence des volontaires pour réaliser une vidéo de présentation du métier de BA. Cette vidéo est destiné à présenter le métier aux nouveaux arrivants sur le pôle.
 Je me suis porté volontaire avec deux autres stagiaires pour réaliser cette mission. 
-Nous avons pris l'initiative de réaliser des interview filmé de 3 collaborateurs, des BA de niveau 3. 
-En parallèle nous avons crée une animation sur l'outil Powtoon. Puis nous avons réalisé un montage vidéo en fusionnant les interview et l'animation Powtoon.
-Cette vidéo a été présenté à tous les acteurs du pole Cnam Métier (nombre de personnes), la vidéo a été très appréciée.
+Nous avons pris l'initiative de réaliser des interview filmé de 3 collaborateurs, des BA de haut niveau. 
+En parallèle nous avons crée une animation sur l'outil Powtoon. Puis nous avons réalisé un montage vidéo en fusionnant les interview et l'animation Powtoon. Cette vidéo a été présenté à tous les acteurs du pole Cnam Métier (plus de 100 personnes), la vidéo a été très appréciée. Cette mission a été l'occasion de découvrir le métier de BA en détail et d'échanger avec des collaborateurs expérimentés et de découvrir ce métier.
 
-Cette mission a été l'occasion de découvrir et d'échanger avec des collaborateurs expérimentés et de découvrir ce métier.
-
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{images/presBA.png}
 \caption{Sopra Steria : Présentation du métier de BA}
