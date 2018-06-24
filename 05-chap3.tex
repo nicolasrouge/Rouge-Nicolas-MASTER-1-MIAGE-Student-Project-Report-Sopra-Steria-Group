@@ -27,9 +27,9 @@ Quelques informations importantes que j'ai pu recueillir lors de mon arrivée da
     \item Refonte du projet en 2017 ;
     \item Exigences du client ;
     \item Des sprints qui durent 3 semaines ;
-    \item Les besoins et les outils du client (les différents acteurs de la Cnam utilisent MSP) ;
+    \item Les besoins et les outils du client (les différents acteurs de la CNAM utilisent MSP) ;
     \item Comprendre les différentes fonctionnalités de PPIL ;
-    \item PPIL et les autres projets de la CNAM : on retrouve dans PPIL tous les autres projets de la Cnam ;
+    \item PPIL et les autres projets de la CNAM : on retrouve dans PPIL tous les autres projets de la CNAM ;
     \item PPIL est intégré dans SharePoint dans le but d'avoir une meilleure organisation interne ;
     \item Fonctionnement du Reporting de PPIL ;
     \item Différents concepts : indicateurs, jalons, diagrammes, lots, projet de référence, projets contributeurs ; 
@@ -41,7 +41,7 @@ A la fin de la semaine, j'ai réalisé une présentation du projet et de ses fon
 
 \subsection{Des indicateurs intéressants en terme de gestion de projet}
 
-Il est évident que PPIL est très intéressant en terme de gestion de projets. Il permet de voir comment une organisation (la Cnam) gère une multitude de projets. Et aussi de voir comment sont gérés les différentes phases d'un projet.
+Il est évident que PPIL est très intéressant en terme de gestion de projets. Il permet de voir comment une organisation (la CNAM) gère une multitude de projets. Et aussi de voir comment sont gérés les différentes phases d'un projet.
 
 J'ai découvert dans PPIL le mécanisme de reporting de projets et de lots ainsi que des indicateurs qui permettent de :
 \begin{itemize}
@@ -51,7 +51,7 @@ J'ai découvert dans PPIL le mécanisme de reporting de projets et de lots ainsi
     \item Suivre des enjeux opérationnels de projets ou de lots ;
     \item S'adapter en fonction des différents acteurs intervenants dans la gestion de projets.
 \end{itemize}
-%sauter une igne
+\vspace{\baselineskip}
 L'objectif dans cette partie est de présenter \textbf{quelques indicateurs} visibles dans PPIL. C'est un portail qui est peut être en phase de devenir \textbf{une référence en terme de gestion de projets}. A fortiori pour moi, étudiant en informatique. 
 
 \subsubsection{Quelques indicateurs}
@@ -75,7 +75,7 @@ Pour les profils Chef de projet, Manager, Responsable DSI et MOA, on peut :
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\textwidth]{images/ppil-bulletion-de-sante.PNG}
+\includegraphics[width=1\textwidth]{images/ppil-bulletion-de-sante-censored.png}
 \caption{PPIL : Bulletin de santé (Profil Chef de Projet)}
 \end{figure}
 
@@ -85,33 +85,27 @@ Pour rappel, un lot contient plusieurs projets. En cliquant sur le nom d’un pr
 
 En accédant au reporting d'un projet, on accède à différents indicateurs intéressants pour un lot/projet : 
 
-Ci-dessous on peut visualiser l'avancement en charges qui nous donne des indicateurs de performance d'un lot (c'est à dire un ensemble de projet) : on peut noter que l'indicateur "avancement en charges" est calculé à partir du consommé global et du RAF et que le Forecast est calculé à partir du : 
-\begin{itemize}
-    \item Consommé global ;
-    \item RAF ;
-    \item Charges devis.
-\end{itemize}
-J'ai du vérifier ces indicateurs lors d'une des phases de qualification (pendant les tests de non régression).
-\begin{figure}[!h]
+Ci-dessous on peut retrouver l'avancement par phases des projets d'un lot ainsi que détail de toutes les phases de réalisation des projets. On peut voir l'évolution de chacun d'eux (en haut on peut voir le projet de référence).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{images/PPIL-Gantt-censored.png}
+\caption{PPIL : Diagramme de Gantt / Avancement par phase}
+\end{figure}
+
+Ci-dessous on peut visualiser l'avancement en charges qui nous donne des indicateurs de performance d'un lot (c'est à dire un ensemble de projet) : on peut noter que l'indicateur "avancement en charges" est calculé à partir du "consommé global" et du "RAF". Le Forecast est calculé à partir du : "Consommé global", du "RAF" et des Charges. J'ai du vérifier tous les indicateurs du graphique d'avancement en charges lors d'une des phases de qualification (pendant les tests de non régression).
+\begin{figure}[h]
 \centering
 \includegraphics[width=1\textwidth]{images/PPIL-avancement.png}
 \caption{PPIL : Graphique d'avancement en charges}
-\end{figure}
-
-On peut retrouver des Gantt de projets. Ci-dessous ce sont les Gantt de projets d'un lot. On peut retrouver le détail de toutes les phases de réalisation des projets. Ainsi, on peut voir l'évolution de chaque projet (en haut on peut voir le projet de référence).
-
-\begin{figure}[!h]
-\centering
-\includegraphics[width=2.5\textwidth]{images/PPIL-Gantt.png}
-\caption{PPIL : Diagramme gantt des projets}
 \end{figure}
 
 L'indicateur ci-dessous précise l'avancement d'un projet en fonction des différents jalons. On peut voir les jalons dont la date a été franchie, reportée ou en retard. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{images/temps-temps.png}
-\caption{PPIL : Le diagramme temps temps}
+\includegraphics[width=1\textwidth]{images/temps-temps.png}
+\caption{PPIL : Diagramme temps-temps}
 \end{figure}
 
 \section{La qualification}
@@ -148,7 +142,7 @@ J'ai eu l'occasion de rédiger des plans de tests. Cette étape demande une gran
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\textwidth]{images/HPLMplantest.png}
-\caption{HP LM : Plan de test}
+\caption{HPALM : Un plan de test}
 \end{figure}
 
 \subsection{Un exemple de test réalisé : Les tests de Non Régression (TNR)}
@@ -162,7 +156,7 @@ Je vais décrire ici le test "06-TNR-ReportingRestitutionDuLot". Lors de ce test
 \textbf{Description d'une étape qui m'a posée des difficultés pendant ce test :}
 C'est l'étape de vérification des indicateurs de suivi d'avancement du lot que j'ai choisi de détailler.
 Le cas à vérifier se trouve dans PPIL, dans la partie restitution de l'avancement d'un projet de référence. Mon but étant de vérifier que les résultats restitués dans les indicateurs soient bien correct. Pour cela il a fallu que j'aille chercher les données en base et que j'effectue des calculs avec ces données.
-Pour comprendre comment sont calculés les indicateurs de restitution pour l'avancement d'un lot, j'ai consulté les SFD afin de récupérer les règles de calcul. Je suis allé en base de données afin de récupérer les données (récupérer les projets à partir desquels les calculs sont effectués). J'ai du faire des requêtes assez complexes pour récupérer les bons projets. Après cela, j'ai importé les projets et leurs informations dans Excel pour y faire mes calculs. N'ayant toujours pas le bon résultat, mais ayant fait ces calculs avec rigueur, j'ai demandé des explications à un BA, notamment, sur un détail fonctionnel particulier. Ce détail portait sur la synchronisation des données de Microsoft Project dans PPIL (outil utilisé par les Chef de projet de la Cnam pour mettre à jour les jalons de leurs projets). J'ai finalement trouvé la solution. Grâce aux explications et à l'analyse d'une procédure stockée.
+Pour comprendre comment sont calculés les indicateurs de restitution pour l'avancement d'un lot, j'ai consulté les SFD afin de récupérer les règles de calcul. Je suis allé en base de données afin de récupérer les données (récupérer les projets à partir desquels les calculs sont effectués). J'ai du faire des requêtes assez complexes pour récupérer les bons projets. Après cela, j'ai importé les projets et leurs informations dans Excel pour y faire mes calculs. N'ayant toujours pas le bon résultat, mais ayant fait ces calculs avec rigueur, j'ai demandé des explications à un BA, notamment, sur un détail fonctionnel particulier. Ce détail portait sur la synchronisation des données de Microsoft Project dans PPIL (outil utilisé par les Chef de projet de la CNAM pour mettre à jour les jalons de leurs projets). J'ai finalement trouvé la solution. Grâce aux explications et à l'analyse d'une procédure stockée.
 
 %Pour résumer, j'ai du faire appel à plusieurs
 %Expliquer ce problème
@@ -171,7 +165,7 @@ Pour comprendre comment sont calculés les indicateurs de restitution pour l'ava
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{HPALM-test.PNG}\\[1cm]
-\caption{HP ALM : Déroulement d'un test}
+\caption{HPALM : Déroulement d'un test}
 \end{figure}
 
 \section{Environnement technique du projet}
@@ -303,7 +297,7 @@ Ci-dssous le workflow des anomalies dans HPALM :
 
 \subsection{Quelques exemples d'anomalies corrigées}
 
-Toutes les anomalies ont été intéressantes à corriger. Elles m'ont fait progresser et travailler sur des technologies diverses. J'ai réussi à acquérir les compétences techniques et nécessaires au projet. L'enjeu de la correction de ces anomalies c'est de n'avoir aucun retour bloquant en qualification interne et externe ainsi que de garantir la non régression.
+Toutes les anomalies ont été intéressantes à corriger. Elles m'ont fait progresser et travailler sur des technologies diverses. J'ai réussi à acquérir les compétences techniques et nécessaires au projet. L'enjeu de la correction de ces anomalies : aucun retour bloquant en qualification interne et externe tout en garantissant la non régression.
 
 \subsubsection{Anomalie [Portefeuille][liste déroulante]}
 
@@ -363,18 +357,18 @@ Cette anomalie était visible en plusieurs endroits. Notamment sur l'interface d
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=1\textwidth]{images/ano2.png}
+\includegraphics[width=1\textwidth]{images/ano2-censored.png}
 \caption{HPALM : Defect 2112}
 \end{figure}
 
 
-\subsubsection{Troisième anomalie }
+\subsubsection{Anomalie [Onglet synthèse]}
 
 \textbf{Description de l'anomalie :} En restitution d'un projet, onglet synthèse, quand on remonte sur une semaine précédente, les dates ne sont pas les bonnes. 
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=1\textwidth]{images/ppil-indicateur-synthese.PNG}
+\includegraphics[width=1\textwidth]{images/ppil-indicateur-synthese-censored.png}
 \caption{Indicateur Synthèse}
 \end{figure}
 
@@ -386,10 +380,9 @@ Les difficultés rencontrées lors de cette correction ont été :
 \end{itemize}
 
 
-\subsubsection{Capacity Planning}
+\subsubsection{L'indicateur Capacity Planning : des expressions multidimensionnelles}
 
-J'ai corrigé plusieurs anomalies du capacity planning, j'ai manipulé des requêtes très complexes qui vont chercher des données sur le CUBE. Aucun membre de l'équipe ne maîtrise la technologie CUBE. J'ai été chargé pendant une semaine d'analyser les anomalies et de trouver une correction. Un des développeur m'a rejoint pour chercher des solutions.
-
+Le Capacity Planning est sans doute l'indicateur le plus complexe de PPIL. En effet, le Capacity Planning récupère les données grâce à des expressions multidimensionnelles (MDX) (Multidimensional Expressions), un langage de requête pour les bases de données OLAP. Je dois donc manipuler des expressions multidimensionnelles afin d'extraire des données stockées dans le Cube. Aucun membre de l'équipe est expert dans cette technologie. J'ai donc adoptée une démarche d'analyse du fonctionnement des requêtes/expressions existantes et montée en compétence sur les bases de données OLAP. Pour le moment, j'ai réussi à corriger une des trois anomalies qui m'ont été confiés. Vous pouvez trouver en annexes une image du Capacity Planning.
 
 %%% Local Variables: 
 %%% mode: latex
